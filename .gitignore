@@ -2,3 +2,6 @@ src
 pkg
 bin
 log
+
+*json.gz
+server

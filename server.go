@@ -7,16 +7,13 @@
 package main
 
 import (
-	// "encoding/json"
 	"flag"
 	"fmt"
 	"log"
-	// "net/http"
 	_ "net/http/pprof"
 	"os"
 	"os/signal"
 	"runtime/pprof"
-	// "time"
 )
 
 var (
@@ -27,8 +24,6 @@ var (
 )
 
 const (
-	// DEFAULT_HTTP_PORT int = 8080
-	//DEFAULT_TCP_PORT    int    = 3333
 	VERSION string = "0.0.1"
 )
 
@@ -79,7 +74,6 @@ func main() {
 			log.Println("Gracefully shutting down")
 			log.Println("Waiting for sockets to close...")
 			for {
-				// 	geo_skeleton_server.ServerLogger.Info("Shutting down...")
 				os.Exit(0)
 			}
 		}
@@ -87,7 +81,4 @@ func main() {
 
 	http_server := HttpServer{Port: port}
 	http_server.Start()
-
-	// http.HandleFunc("/", handler)
-	// http.ListenAndServe(":8080", nil)
 }

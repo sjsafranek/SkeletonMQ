@@ -170,9 +170,9 @@ func AddMessageHandler(w http.ResponseWriter, r *http.Request) {
 	w.Write(js)
 }
 
-func GetRId() string {
-	return newJobId(8)
-}
+// func GetRId() string {
+// 	return newJobId(8)
+// }
 
 func GetRequestBody(r *http.Request) ([]byte, error) {
 	body, err := ioutil.ReadAll(r.Body)
